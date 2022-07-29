@@ -1,0 +1,425 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156035618-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-156035618-1');
+    </script>
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-8571889943442770",
+        enable_page_level_ads: true
+      });
+    </script>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Work | Job Experience Calculator Online</title>
+    
+    <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW, ARCHIVE" />
+    <meta name="description" content="Work or Job experience is the total number of experience you have in you professional career.It is denoted in years, months and days.">
+    <meta name="keywords" content="Online work experience calculator,Work Experience Calculator,Job Experience Calculator,Total experience in years,Total work experience in months,count years of experience,employee work experience calculator" />
+    <link rel="icon" href="/logo/CalcUniverseLogo.png" type="image/png">
+    
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script async src="https://cse.google.com/cse.js?cx=017059186043912054958:3l54rwtsm66"></script>
+    
+    <script src="/utils/datetime.js"></script>
+
+    <script>
+        $(function() {
+            $("#includedHeaderContent").load("/utils/calcuniversenewhdr.html");
+        });
+    </script>
+   
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+        * {
+            font-family: 'Montserrat', sans-serif;
+        }
+        body {
+            background: #f2f2f2;
+        }
+        .btndelete {
+          background-color: DodgerBlue;
+          border: none;
+          color: white;
+          font-size: 16px;
+          cursor: pointer;
+        }
+        
+        .btn:hover {
+          background-color: RoyalBlue;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <div id="includedHeaderContent"></div>
+    
+    <div class="container">  
+        <div class="navigation">
+            <span style="color: #0758B9;"><a href="http://www.calcuniverse.com/home.html">Home</a> >> <a href="http://www.calcuniverse.com/finance/work-experience-calculator.html">Work Experience Calculator</a></span>
+        </div>
+        
+        <h3 style="color:#003366;"> <b> Work | Job Experience Calculator </b> </h3>
+        
+        <div class="row">
+            <div class="col-12 col-sm-8">
+                
+                <div id="calcarea" style="background-color: #dde0f1; color:black; padding-left: 5px;padding-bottom: 10px;">
+                    <div style="padding:5px">
+                        <form>
+                            <div class="form-group">
+                                <label for="companyname"><b>Company Name</b></label>
+                                <input type="text" class="form-control col-12 col-sm-10" id="companyname" placeholder="Enter your company name">
+                            </div>
+                            <div class="form-group">
+                                <label for="joinyear"><b>Year Of Join</b></label>
+                                <div class="input-group date col-10 col-sm-4" data-date-format="mm-dd-yyyy" style="padding-left:0px;">
+                                    <input style="background-color: white;" class="form-control" id="joinyear" type="text" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="relieveyear"><b>Year Of Relieving</b></label>
+                                <div class="input-group date col-10 col-sm-4" data-date-format="mm-dd-yyyy" style="padding-left:0px;">
+                                    <input style="background-color: white;" class="form-control" type="text" id="relieveyear" />
+                                </div>
+                            </div>
+                            <script>
+                                $(function () {
+                                  $("#joinyear").datepicker({ 
+                                        autoclose: true, 
+                                        todayHighlight: true
+                                  }).datepicker('update', new Date());
+                                  
+                                  $("#relieveyear").datepicker({ 
+                                        autoclose: true, 
+                                        todayHighlight: true
+                                  }).datepicker('update', new Date());
+                                });
+                            </script>
+                        </form>
+                        
+                        <div class="row">
+                            <div class="col-6 col-sm-4">
+                              <button class="btn btn-primary btn-block" id="addcompany">Add This Company</button>
+                            </div>
+                            <div class="col-6 col-sm-4">
+                              <button class="btn btn-primary btn-block" id="calcexpeience">Calculate Experience</button>
+                            </div>
+                        </div>
+                    </div>    
+                    <br/>
+                    <div style="padding-left: 5px;">
+                        <table class="table-responsive" id="companytable" style="text-align: center;">
+                          <thead>
+                            <tr>
+                              <th style="border-color: black;border-width: 1px;border-style: groove;background-color: #8edad6;"></th>
+                              <th style="border-color: black;border-width: 1px;border-style: groove;width: 5%; background-color: #8edad6;">#</th>
+                              <th style="border-color: black;border-width: 1px;border-style: groove;width: 50%; background-color: #8edad6;">Company</th>
+                              <th style="border-color: black;border-width: 1px;border-style: groove;width: 20%; background-color: #8edad6;">Start Date</th>
+                              <th style="border-color: black;border-width: 1px;border-style: groove;width: 20%; background-color: #8edad6;">End Date</th>
+                            </tr>
+                          </thead>
+                          <tbody></tbody>
+                        </table>
+                        <br/>
+                        <table class="table-responsive" id="resulttable" style="text-align: center;">
+                          <thead>
+                                <tr>
+                                    <th  colspan="2" style="border-color: red;border-width: 1px;border-style: groove;width: 50%; background-color: #8edad6;"><b>Total Years Of Experience</b></th>
+                                </tr>
+                          </thead>
+                          <tbody>
+                                <tr>
+                                  <th style="border-color: black;border-width: thin;border-style: groove;width: 50%;"><h4>Years</h4></th>
+                                  <th style="border-color: black;border-width: thin;border-style: groove;width: 20%"><div id="yearsresult">0</div></th>
+                                </tr>
+                                <tr>
+                                  <th style="border-color: black;border-width: thin;border-style: groove;width: 50%;"><h4>Months</h4></th>
+                                  <th style="border-color: black;border-width: thin;border-style: groove;width: 20%"><div id="monthsresult">0</div></th>
+                                </tr>
+                                <tr>
+                                  <th style="border-color: black;border-width: thin;border-style: groove;width: 50%;"><h4>Days</h4></th>
+                                  <th style="border-color: black;border-width: thin;border-style: groove;width: 20%"><div id="daysresult">0</div></th>
+                                </tr>
+                                <tr>
+                                    <th  colspan="2" style="border-color: black;border-width: thin;border-style: groove;width: 50%;"><div id="finalresult">0 Years, 0 Months and 0 Days</div></th>
+                                </tr>
+                          </tbody>
+                        </table>
+                    </div>
+                </div>  
+                
+                <div id="calccontent" style="padding-left: 5px;padding-top: 15px;">
+                    <h4 style="color:#003366;"> <b style="color:red"> WHAT </b> <b> is Work | Job Experience ?</b></h4>
+                    <p> Work or Job experience is simply the total number of experience you have in you professional career. It is denoted in years, months and days.
+                        Work or Job experience is basically divided into 2 types. The one "total number of experience" in your career across all platform or technology. 
+                        The next one is basically the "total number of relevant experience" in a particular platform or technology. The word relevant means here is, 
+                        in a particular platform or department or technology you worked for a particular interval of time period.</p>
+                    <p> A couple of generations ago, an employee or labour work hours determined by 8 hours and accepted universally. People used to work more than 8 hours before that 
+                    and was be there as a slave to his boss. As time goes, employee unity was formed and celebrate May 1st as a labour day every year. And people used to switch 
+                    theit work | job to any other company. </p>    
+                    
+                    <h4 style="color:#003366;"> <b style="color:red"> WHY </b> <b> we need to calculate work or job experience ?</b></h4>
+                    <div class="text-center">
+                        <div class="col-sm-12 col-12"><img src="/finance/Job_Experience_Calculator.png" alt="Job Experience" title="Job Experience" width="75%"></div>
+                    </div>
+                    <p> Why? Yes, it is necessary for everyone in the world now has to calculate their work or job total or relevant experience as it is the must criteria for them 
+                    when they want to change the current company and join new one. Forget about calculate your work experience manually, you do not need to do it anymore. 
+                    CalcUniverse - online calculator gives you the friendly way of calculating your work or job experience. </p>
+                    
+                    <h4 style="color:#003366;"> <b style="color:red"> HOW </b> <b> to calculate work or job experience ?</b></h4>
+                    <div class="text-center">
+                        <div class="col-sm-12 col-12"><img src="/finance/Work_Experience_Calculator.png" alt="Work Experience" title="Work Experience" width="75%"></div>
+                    </div>
+                    <p> Enter the company name in the "Company name" text box, enter the join and relieving date in the corresponding fields and 
+                     click "Add This Company" button to add the current company details</p>
+                    <p> Add your each company details one by one and click calculate button finally to calculate your work or job experience.</p>
+                </div>    
+                
+            </div>
+            
+            <div class="col-12 col-sm-4"> 
+                <div id="calcsearch" style="background-color: #e6bad6; padding-left: 5px;">
+                    <h4 style="color:#003366;"> <b> Search </b> </h4>
+                    <div style="padding: 8px;"><div class="gcse-search"></div></div>
+                </div> 
+                <br>
+                <div id="relcalcs" style="background-color: #e6bad6; padding-left: 5px;">
+                    <h4 style="color:#003366;"> <b> Related Calculators </b> </h4>
+                    <ul>
+                      <li><a href="http://www.calcuniverse.com/percentage/salary-increase-percentage.html">Salary Hike Percentage Calculator</a></li>
+                      <li><a href="http://www.calcuniverse.com/percentage-calculator.html">Percentage Caculator</a></li>
+                    </ul>  
+                </div> 
+                
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- BMI Vertical Ads Unit -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-8571889943442770"
+                     data-ad-slot="9960491595"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                
+            </div>
+        </div>   
+    </div>
+    
+    <script type="text/javascript">
+    
+        var rownum = 1;
+        
+        $( document ).ready(function() {
+            
+            /*$.ajax({
+                url: '/utils/sendemail.php?country=NOCOUNTRY&city=NOCITY&page=Work Experience Calculator',
+            	success: function (response) {
+            	    console.log(response);
+            	}
+            });*/
+            
+            var totalyears = 0;
+            var totalmonths = 0;
+            var totaldays = 0;
+            var totalcurrentrows = 0;
+            
+            $("#calcexpeience").click(function(){
+                
+                totalyears = 0;
+                totalmonths = 0;
+                totaldays = 0;
+                
+                $('#companytable tr').each(function() {
+                    var startdate = null;
+                    var enddate = null;
+                    
+                    try{
+                        $( this ).find('td').each(function() {
+        					var tdelement = $(this);
+        					if(tdelement!=undefined && tdelement!=null && tdelement!=""){
+        					    var tdid = $(this).attr("id");
+        					    tdid = tdid+"";
+        					    if(tdid!=undefined && tdid!=null && tdid=="t_joinyear"){
+        					        //console.log("In Join year IF");
+        						    startdate = $(this).html();
+        					    }
+        					    if(tdid!=undefined && tdid!=null && tdid=="t_relieveyear"){
+        					        //console.log("In Relieve year IF");
+            						enddate = $(this).html();
+        					    }
+        					}
+        				});
+        				
+        				//console.log("startdate---"+startdate);
+        				//console.log("enddate---"+enddate);
+        				
+        				var d1 = new Date(startdate) ; 
+        				
+        				var d1month = d1.getUTCMonth() + 1; 
+                        var d1day = d1.getUTCDate();
+                        var d1year = d1.getUTCFullYear();
+                        
+                        var d2 = new Date(enddate) ; 
+        				
+        				var d2month = d2.getUTCMonth() + 1; 
+                        var d2day = d2.getUTCDate();
+                        var d2year = d2.getUTCFullYear();
+        				
+        				var diff = datetime.getdiff (d1year, d1month, d1day, d2year, d2month, d2day);
+        
+                        var yearIndex = diff.indexOf(" Years ");
+                        var year = diff.substr(0, yearIndex);
+                        //console.log("year--"+year);
+                        totalyears = totalyears + Number(year);
+    
+                        var monthIndex = diff.indexOf(" Months ");
+                        var monthwholetext = diff.substr(yearIndex, 9);
+                        var month = monthwholetext.replace(" Years ","");
+                        //console.log("month--"+month);
+                        totalmonths = totalmonths + Number(month);
+    
+                        var daysIndex = diff.indexOf(" Days");
+                        var dayswholetext = diff.substr(monthIndex, 10);
+                        var days = dayswholetext.replace(" Months ","");
+                        //console.log("days--"+days);
+                        totaldays = totaldays + Number(days); 
+                        
+                        /*console.log("totalyears=="+totalyears);
+                        console.log("totalmonths=="+totalmonths);
+                        console.log("totaldays=="+totaldays);*/
+                        
+                        if(totaldays > 30){
+                            totaldays = totaldays - 31;
+                            totalmonths = totalmonths+1;
+                        }
+                        
+                        if(totalmonths > 11){
+                            totalmonths = totalmonths - 12;
+                            totalyears = totalyears + 1;
+                        }
+                        
+                        /*console.log("AFTER");
+                        
+                        console.log("totalyears=="+totalyears);
+                        console.log("totalmonths=="+totalmonths);
+                        console.log("totaldays=="+totaldays);*/
+                    }catch(err){console.log("ERROR--"+err);}
+                }); 
+                
+                /*console.log("totalyears Final==="+totalyears);
+                console.log("totalmonths Final==="+totalmonths);
+                console.log("totaldays Final==="+totaldays);*/
+                
+                if(totalyears==undefined || totalyears==null || totalyears==""){
+                    totalyears = 0;
+                }
+                
+                if(totalmonths==undefined || totalmonths==null || totalmonths==""){
+                    totalmonths = 0;
+                }
+                
+                if(totaldays==undefined || totaldays==null || totaldays==""){
+                    totaldays = 0;
+                }
+                
+                document.getElementById("yearsresult").innerHTML = totalyears;
+                document.getElementById("monthsresult").innerHTML = totalmonths;
+                document.getElementById("daysresult").innerHTML = totaldays;
+                
+                document.getElementById("finalresult").innerHTML = totalyears + " Years, " + totalmonths + " Months and " + totaldays + " Days";
+                
+            });
+            
+            $("#addcompany").click(function() {  
+                var companyname = $("#companyname").val();
+                var joinyear = $("#joinyear").val();
+                var relieveyear = $("#relieveyear").val();
+                
+                var startDate = new Date(joinyear);
+                var endDate = new Date(relieveyear);
+                
+                if(companyname==undefined || companyname==null || companyname==""){
+                    alert("Please enter the company name");
+                    return;
+                }
+                
+                if (endDate <= startDate) {
+                    alert("Relieving year should be greater than the Joining year");
+                    return;
+                }else{
+                    
+                    totalcurrentrows++;
+                    
+                    console.log("totalcurrentrows---"+totalcurrentrows);
+                    
+                    var rowdata = "<tr> "+
+                                        " <td id='t_deletebutton' style='border-color: black;border-width: thin;border-style: groove;'><button class='btndelete delete' id='deleterow'><i class='fa fa-trash'></i></button></td> "+
+                                        " <td id='t_rownum' data-field='id' style='border-color: black;border-width: thin;border-style: groove;'>"+totalcurrentrows+"</td> "+
+                                        " <td id='t_companyname' style='border-color: black;border-width: thin;border-style: groove;'>"+companyname+"</td> "+
+                                        " <td id='t_joinyear' style='border-color: black;border-width: thin;border-style: groove;'>"+joinyear+"</td> "+
+                                        " <td id='t_relieveyear' style='border-color: black;border-width: thin;border-style: groove;'>"+relieveyear+"</td> "+
+                                    " </tr>";
+                    var row = $(rowdata);
+                    $("#companytable > tbody").append(row);
+                    rownum = rownum+1;    
+                }
+            });
+            
+            
+            $(document).on("click", ".btndelete", function(){
+                console.log("Class v1 delete");
+                $(this).parents("tr").remove();
+                
+                totalcurrentrows=0;
+                $('#companytable tr').each(function() {
+                    try{
+                        $( this ).find('td').each(function() {
+        					var tdelement = $(this);
+        					if(tdelement!=undefined && tdelement!=null && tdelement!=""){
+        					    var tdid = $(this).attr("id");
+        					    tdid = tdid+"";
+        					    if(tdid!=undefined && tdid!=null && tdid=="t_rownum"){
+        					        console.log("Update rownum--"+totalcurrentrows);
+        					        totalcurrentrows++;
+        						    $(this).html(totalcurrentrows);
+        						}
+        					}
+        				});
+                    }catch(err){console.log("ERROR--"+err);}
+                }); 
+                console.log("Final row count after delete--"+totalcurrentrows);
+            });
+        });
+    </script>
+    
+</body>
+</html>
