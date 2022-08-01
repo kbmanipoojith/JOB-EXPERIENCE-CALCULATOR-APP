@@ -11,7 +11,7 @@ function calculateDiff() {
 
   let diff = new Date(YearOfRelieving.getTime() - YearOfJoin.getTime());
 
-  let output = document.getElementById("showAge");
+  let output = document.getElementById("show Total Years Of Experience");
   output.id = "show Total Years Of Experience";
   if (diff == NaN) {
     console.log("Plese select data first!");
