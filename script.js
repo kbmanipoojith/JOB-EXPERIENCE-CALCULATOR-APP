@@ -1,6 +1,6 @@
 function calculateDiff() {
   let date_1 = document.getElementById("Year Of Join").value;
-  let date_2 = document.getElementById("currentdate").value;
+  let date_2 = document.getElementById("Year Of Relieving").value;
 
   if (!date_2) {
     date_2 = new Date().toJSON().slice(0, 10);
