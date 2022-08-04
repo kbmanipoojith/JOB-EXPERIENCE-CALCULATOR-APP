@@ -7,10 +7,10 @@ function calculateDiff() {
     date_2 = new Date().toJSON().slice(0, 10);
   }
 
-  let Year Of Join = new Date(date_1);
-  let Year Of Relieving = new Date(date_2);
+  let yearOfJoin = new Date(date_1);
+  let yearOfRelieving = new Date(date_2);
 
-  let diff = new Date(cDate.getTime() - bDate.getTime());
+  let diff = new Date(yearOfRelieving.getTime() - yearOfJoin.getTime());
 
   let output = document.getElementById("showTotalYearsOfExperience");
   output.id = "showTotalYearsOfExperience";
