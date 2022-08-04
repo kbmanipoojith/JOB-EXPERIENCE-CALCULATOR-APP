@@ -2,6 +2,7 @@ function calculateDiff() {
   let date_1 = document.getElementById("bDate").value;
   let date_2 = document.getElementById("cDate").value;
 
+  
   if (!date_2) {
     date_2 = new Date().toJSON().slice(0, 10);
   }
